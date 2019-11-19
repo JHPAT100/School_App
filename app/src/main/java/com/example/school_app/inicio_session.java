@@ -61,7 +61,7 @@ public class inicio_session extends AppCompatActivity implements Response.Listen
 
 
 
-        String URL="http://puntosingular.mx/school_app/login.php?correo=haziel.pat@cbtis72.edu.mx";
+        String URL="http://puntosingular.mx/school_app/login.php?correo="+te_1.getText().toString();
         jsonObjectRequest=new JsonObjectRequest(Request.Method.GET,URL,null,this,this);
         request.add(jsonObjectRequest);
     }
