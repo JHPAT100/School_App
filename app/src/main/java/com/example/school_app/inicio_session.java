@@ -80,7 +80,8 @@ public class inicio_session extends AppCompatActivity implements Response.Listen
             cargarWebService();
         }
         if(v==b_2){
-
+            Intent x = new Intent(this,registro.class);
+            startActivity(x);
         }
 
     }
