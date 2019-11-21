@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 public class inicio_session extends AppCompatActivity implements Response.Listener<JSONObject>, Response.ErrorListener, View.OnClickListener{
     //inicializando
+    public static String t_1,t_2;
     EditText te_1,te_2;
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
@@ -107,6 +108,8 @@ public class inicio_session extends AppCompatActivity implements Response.Listen
         String com_2=te_2.getText().toString();
         if (com.equals(user.getCorreo()) && com_2.equals(user.getContrasena())){
             c_user=te_1.getText().toString();
+            t_1=te_1.getText().toString();
+            t_2=te_2.getText().toString();
             te_1.setText("");
             te_2.setText("");
 

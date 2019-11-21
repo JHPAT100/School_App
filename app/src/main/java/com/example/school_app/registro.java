@@ -61,6 +61,7 @@ public class registro extends AppCompatActivity  implements Response.Listener<JS
         progreso.setMessage("cargando....");
         progreso.show();
         //barra de dialogo
+
         String URL="http://puntosingular.mx/school_app/registro.php?nombre="+te_1.getText().toString()+"&correo="+te_2.getText().toString()+"&contrasena="+te_3.getText().toString();
 
 
@@ -73,23 +74,16 @@ public class registro extends AppCompatActivity  implements Response.Listener<JS
 
     @Override
     public void onClick(View v) {
-
-
-
         if(v==btn){
-
+            //barra de dialogo
+            progreso=new ProgressDialog(this);
+            progreso.setMessage("cargando....");
+            progreso.show();
+            //barra de dialogo
             String a1,a2;
             a1=te_3.getText().toString();
             a2=te_4.getText().toString();
             if(t_1.equals(te_1.getText().toString()) && t_2.equals(te_2.getText().toString()) && t_3.equals(te_3.getText().toString()) && t_4.equals(te_4.getText().toString()) ){
-                //barra de dialogo
-                progreso=new ProgressDialog(this);
-                progreso.setMessage("cargando....");
-                progreso.show();
-
-
-
-                //barra de dialogo
                 te_1.setError("Campos Obligatorios");
                 te_2.setError("Campos Obligatorios");
                 te_3.setError("Campos Obligatorios");
@@ -143,7 +137,6 @@ public class registro extends AppCompatActivity  implements Response.Listener<JS
             Intent x = new Intent(this,inicio_session.class);
             startActivity(x);
         }
-
     }
 
     @Override
